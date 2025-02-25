@@ -29,7 +29,7 @@ To get started with this project, clone the repository and install the dependenc
 git clone <repository-url>
 cd MusicPlayer/FrontEnd
 npm install
-
+```
 
 #### SnapShot
 ![image](https://github.com/user-attachments/assets/f891ff8f-584c-4384-99a1-2a74eecfb8c8)
