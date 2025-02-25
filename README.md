@@ -1,3 +1,7 @@
+
+![MusicPlayer](https://github.com/user-attachments/assets/8d954c6e-eff8-47c8-a790-3086181aff3a)
+
+
 # MusicPlayer FrontEnd
 
 This project is a music player application built with React and Vite.
