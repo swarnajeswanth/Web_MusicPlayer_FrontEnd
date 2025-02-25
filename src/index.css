@@ -1,0 +1,21 @@
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem 1rem;
+}
+body {
+  background-color: #111111;
+  overflow: hidden;
+}
+#main::-webkit-scrollbar,
+#playlist-cards::-webkit-scrollbar,
+#section::-webkit-scrollbar {
+  display: none;
+}
