@@ -12,7 +12,7 @@ const HomePage = () => {
       <div className="relative w-[80%] md:min-w-[90%] flex h-full justify-between ">
         <Main />
         <Section />
-        {/* <Outlet /> */}
+        <Outlet />
         <Player />
       </div>
     </div>

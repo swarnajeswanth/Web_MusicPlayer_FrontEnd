@@ -15,7 +15,11 @@ body {
   overflow: hidden;
 }
 #main::-webkit-scrollbar,
+#ArtistSongs::-webkit-scrollbar,
 #playlist-cards::-webkit-scrollbar,
 #section::-webkit-scrollbar {
+  display: none;
+}
+#lyrics::-webkit-scrollbar {
   display: none;
 }
