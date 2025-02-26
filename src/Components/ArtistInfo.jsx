@@ -1,16 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
 import { NavLink } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const ArtistInfo = () => {
+  useGSAP(() => {
+    gsap.from(".artist-info", {
+      opacity: 0,
+      x: 50,
+      duration: 0.5,
+    });
+
+    const tl = gsap.timeline();
+    tl.from(".artist-songs", {
+      scale: 0.5,
+      y: -50,
+      duration: 0.5,
+    });
+
+    tl.from("#ArtistSongs >div ", {
+      opacity: 0,
+      y: -50,
+      duration: 0.5,
+      stagger: 0.2,
+    });
+    const tl1 = gsap.timeline();
+    tl1.from(".artist-hit-container", {
+      opacity: 0,
+      x: 50,
+      duration: 0.5,
+    });
+    tl1.from(".artist-hit-songs >section", {
+      opacity: 0,
+      y: -50,
+      duration: 0.5,
+      stagger: 0.2,
+    });
+  }, []);
   return (
-    <div className="absolute flex gap-3 bg-[#222222] h-[80%] top-[10%] right-0 z-99 w-full text-white">
-      <NavLink to="/">
+    <div className="artist-info absolute flex gap-3 bg-[#222222] h-[80%] top-[10%] right-0 z-99 w-full text-white">
+      <NavLink to="/" className="z-99">
         <IoMdClose
           className="absolute top-0 h-fit w-fit  rounded-full bg-[#fcfcfc] text-black"
           style={{ padding: "0.2rem", margin: "0.8rem" }}
         />
       </NavLink>
-      <div className="w-[60%] flex flex-col h-full overflow-hidden">
+      <div className="artist-songs w-[60%] flex flex-col h-full overflow-hidden">
         <div
           className="flex justify-between h-[50%] "
           style={{ padding: "1rem 1.4rem" }}
@@ -76,7 +111,7 @@ const ArtistInfo = () => {
           </div>
         </section>
       </div>
-      <div className="w-[35%] ">
+      <div className="artist-hit-container not-visited:w-[35%] ">
         <div>
           <h3 className="font-bold text-2xl" style={{ marginBottom: "1rem" }}>
             Biography
@@ -87,7 +122,7 @@ const ArtistInfo = () => {
             worldwide, making her one of the world's best-selling music artists.
           </p>
         </div>
-        <div>
+        <div className="artist-hit-songs">
           <h3 className="font-bold text-2xl" style={{ margin: "1rem" }}>
             Hit Songs
           </h3>

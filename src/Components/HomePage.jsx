@@ -4,6 +4,7 @@ import Main from "./Main";
 import Section from "./Section";
 import { Outlet } from "react-router-dom";
 import Player from "./Player";
+
 const HomePage = () => {
   return (
     <div className="flex w-full h-full ">
